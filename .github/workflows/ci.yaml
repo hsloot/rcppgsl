@@ -33,6 +33,11 @@ jobs:
           ./run.sh install_deps
           ./run.sh install_aptget libgsl-dev
 
+      - name: Echo gsl-config
+        run: |
+          gsl-config --libs
+          gsl-config --cflags
+
       - name: Test
         run: ./run.sh run_tests
 
