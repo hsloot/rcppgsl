@@ -1,7 +1,7 @@
 
 # set by configure
-GSL_CFLAGS = @GSL_CFLAGS@
-GSL_LIBS   = @GSL_LIBS@
+GSL_CFLAGS = -I/opt/homebrew/Cellar/gsl/2.7.1/include
+GSL_LIBS   = -L/opt/homebrew/Cellar/gsl/2.7.1/lib -lgsl -lgslcblas
 
 # combine with standard arguments for R
 PKG_CPPFLAGS = $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) $(GSL_CFLAGS) -I../inst/include
